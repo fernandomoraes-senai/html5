@@ -6,35 +6,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+    td#titulo{text-align: left;font-size: 25px;padding: 25px 25px 25px 70px;}
+
+    button{background-color: #008cba;
+            padding: 10px 50px;
+            margin: 15px;
+            border-radius: 5px;}
+    input[type=text],select, input[type=date] {
+        padding: 5px 15px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid grey;
+        border-radius: 5px;
+        box-sizing: border-box;
+        box-shadow: 2px 2px 5px lightblue;
+    }
+    table{width: 80%;margin: auto;border: 10px solid red;padding: 40px;}
+
+    yd#texto{width: 15%;padding: 10px;text-align: right;}
+</style>
 <body>
     <table>
         <tr>
-            <td id="texto" >E-mail</td>
-            <td id="campos"><input type="text" name="" id=""></td>   
+            <td id="e-mail" >E-mail</td>
+            <td id="e-mail"><input type="text" name="" id=""></td>   
             <td id="texto" >Crie uma Senha</td>
-            <td id="campos"><input type="text" name="" id=""></td>   
+            <td id="campos"><input type="password"  name="" id=""></td> 
+            
              
         </tr>
 
         <tr>
-            <td id="texto" >Repetir e-mail</td>
-            <td id="campos"><input type="text" name="" id=""></td>   
+            <td id="e-mail" >Repetir e-mail</td>
+            <td id="e-mail"><input type="text" name="" id=""></td>   
             <td id="texto" >Repetir Senha</td>
-            <td id="campos"><input type="text" name="" id=""></td>   
+            <td id="campos"><input type="password" name="" id=""></td>   
              
         </tr>    
         <tr>
-            <td id="texto">Dados Cadastrais </td> 
-            <td id="campos"></td>
-            <td id="texto">Endereço de Entrega</td>
-            <td id="campos"></td>
+            <td id="titulo" colspan="2">Dados Cadastrais </td> 
+            
+            <td id="titulo" colspan="2">Endereço de Entrega</td>
+            
         </tr>
 
         <tr>
             <td><input type="radio" name="fcurso" value="ST"> Pessoa física </td>
             <td><input type="radio" name="fcurso" value="EM"> Pessoa jurídica </td>
             <td id="texto">CEP</td>
-            <td id="campos"><input type="text" name="" id=""></td>
+            <td id="campos"><input type="text" placeholder="32.265.170" name="" id=""></td>
         </tr>
         
         <tr>
@@ -50,32 +71,40 @@
             <td id="campos"><input type="text" name="" id=""></td>
         </tr>
         <tr>
-            <td id="texto">sexo</td>
-            <td id="campos"><input type="text" name="" id=""></td>
+            <td id="texto">sexo*</td>
+            <td>
+                <select>
+                    <option value="">selecione
+                    <option value="">Feminino
+                    <option value="">Masculino
+                    <option value="">Prefiro não declarar  
+                </select>                 
+            </td>
+        
             <td><input type="checkbox" name="" value=""> Sem Número </td>
 
         </tr>
         <tr>
             <td id="texto">CPF</td>
-            <td id="campos"><input type="text" name="" id=""></td>
+            <td id="campos"><input type="number" placeholder="123.456.789-10" name="" id="" size="30"></td>
             <td id="texto">Complemento</td>
-            <td id="campos"><input type="text" name="" id=""></td>
+            <td id="campos"><input type="text" name="" id="" size="30"></td>
         </tr>
         <tr>
             <td id="texto">Telefone</td>
-            <td id="campos"><input type="text" name="" id=""></td>
+            <td id="campos"><input type="tel" placeholder="(xx)xxxx-xxxx" name="fone" id="foneid"></td>
             <td id="texto">Referência</td>
             <td id="campos"><input type="text" name="" id=""></td>
         </tr>
         <tr>
             <td id="texto">Celular</td>
-            <td id="campos"><input type="text" name="" id=""></td>
+            <td id="campos"><input type="tel" placeholder="(xxx)xxxxx-xxxx" name="" id=""></td>
             <td id="texto">Bairro</td>
             <td id="campos"><input type="text" name="" id=""></td>
         </tr>
         <tr>
             <td id="texto">Nacimento</td>
-            <td id="campos"><input type="text" name="" id=""></td>
+            <td id="campos"><input type="date" name="" id=""></td>
             <td id="texto">Cidade</td>
             <td id="campos"><input type="text" name="" id=""></td>
         </tr>
@@ -83,10 +112,42 @@
             <td></td>
             <td><input type="checkbox" name="" value=""> Recebar ofertas e novidades por e-mail </td>
             <td id="texto">Estado</td>
-            <td id="campos"><input type="text" name="" id=""></td>
+            <td>
+                <select>
+                    <option value="">Acre (AC)
+                    <option value="">Alagoas (AL)
+                    <option value="">Amapá (AP)
+                    <option value="">Amazonas (AM)
+                    <option value="">Bahia (BA)
+                    <option value="">Ceará (CE)          
+                    <option value="">Distrito Federal (DF)
+                    <option value="">Espírito Santo (ES)
+                    <option value="">Goiás (GO)
+                    <option value="">Maranhão (MA)          
+                    <option value="">Mato Grosso (MT)
+                    <option value="">Mato Grosso do Sul (MS)
+                    <option value="">Minas Gerais (MG)
+                    <option value="">Pará (PA)          
+                    <option value="">Paraíba (PB)
+                    <option value="">Paraná (PR)
+                    <option value="">Pernambuco (PE)
+                    <option value="">Piauí (PI)          
+                    <option value="">Rio de Janeiro (RJ)
+                    <option value="">Rio Grande do Norte (RN)
+                    <option value="">Rio Grande do Sul (RS)
+                    <option value="">Rondônia (RO)         
+                    <option value="">Roraima (RR)
+                    <option value="">Santa Catarina (SC)
+                    <option value="">São Paulo (SP)
+                    <option value="">Sergipe (SE)          
+                    <option value="">Tocantins (TO)
+                                                   
+                </select>                 
+            </td>
         </tr>
         <tr>
-            <td colspan="4" id="texto"><button>cadastrar</button></td>
+            <td colspan="4" id="texto"><button>Cadastrar</button></td>
+            <td colspan="4" id="texto"><button>Limpar</button></td>
         </tr>
 
     </table>
